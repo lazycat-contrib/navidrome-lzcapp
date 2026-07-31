@@ -22,10 +22,12 @@ images:
   - id: navidrome
     target: service
     service: navidrome
-    source: docker.1ms.run/deluan/navidrome
+    source: deluan/navidrome
     channel: stable
     delivery:
-      mode: direct
+      mode: mirror
+      image_template: docker.1ms.run/deluan/navidrome:{tag}
+      require_digest_match: true
 
 stores:
   official:
@@ -35,6 +37,6 @@ stores:
       enabled: false
   private:
     enabled: true
-    skip_if_version_exists: false
+    skip_if_version_exists: true
     name: Navidrome
     summary: Published from GitHub Actions

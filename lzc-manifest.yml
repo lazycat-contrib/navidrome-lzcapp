@@ -11,7 +11,7 @@ application:
 
 services:
   navidrome:
-    # upstream: docker.1ms.run/deluan/navidrome:0.63.2
+    # upstream: deluan/navidrome:0.63.2
     image: docker.1ms.run/deluan/navidrome:0.63.2
     user: "root"
     environment:
