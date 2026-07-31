@@ -9,7 +9,7 @@ license: GPL-3.0-only
 
 locales:
   zh:
-    name: "Navidrome 音乐服务器"
+    name: "Navidrome"
     description: "现代化的个人音乐服务器与串流播放器，兼容 Subsonic/Airsonic"
   en:
     name: "Navidrome"
