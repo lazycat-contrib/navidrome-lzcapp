@@ -33,7 +33,6 @@ application:
         if (typeof payload.password === "string" && payload.password.length > 0) {
           ctx.flow.set("navidrome.pending_password", payload.password);
         }
-
     - id: navidrome-commit-password
       auth_required: false
       on: response
@@ -51,7 +50,6 @@ application:
         if (typeof password === "string" && password.length > 0) {
           ctx.persist.set("navidrome.password", password);
         }
-
     - id: navidrome-login-autofill
       on: browser
       when:
@@ -66,16 +64,15 @@ application:
             userSelector: "input[name='username']"
             passwordSelector: "input[name='password']"
             autoSubmit: false
-
     - id: open-save-chooser
       on: browser
       when:
         - /*
       do:
         - src: file:///lzcapp/pkg/content/lazycat-injects/lzc-file-chooser-inject.js
-
 services:
   navidrome:
+    # upstream: docker.1ms.run/deluan/navidrome:0.63.2
     image: docker.1ms.run/deluan/navidrome:0.63.2
     user: "root"
     environment:
@@ -85,9 +82,7 @@ services:
       - ND_DEEZER_LANGUAGE={{ .U.deezer_language }}
     binds:
       - /lzcapp/var/data:/data
-
 ext_config:
   enable_document_access: true
-
 usage: |
   首次打开 Navidrome 时，请在其原生初始化页面创建管理员账号。音乐库读取安装向导中选择的目录，应用数据保存在微服实例的持久目录中。
