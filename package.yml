@@ -1,0 +1,21 @@
+package: community.lazycat.app.navidrome
+version: 0.63.2
+name: Navidrome
+description: "A modern music server and streamer compatible with Subsonic/Airsonic"
+min_os_version: 1.5.0
+author: Navidrome Team
+homepage: https://www.navidrome.org
+license: GPL-3.0-only
+
+locales:
+  zh:
+    name: "Navidrome 音乐服务器"
+    description: "现代化的个人音乐服务器与串流播放器，兼容 Subsonic/Airsonic"
+  en:
+    name: "Navidrome"
+    description: "A modern music server and streamer compatible with Subsonic/Airsonic"
+
+permissions:
+  required:
+    - net.internet
+    - document.read

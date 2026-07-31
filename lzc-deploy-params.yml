@@ -1,0 +1,21 @@
+params:
+  - id: music_dir
+    type: string
+    name: "Music Directory"
+    description: "Music folder under your LazyCat home directory. Navidrome reads this folder as its music library."
+    default_value: "Music"
+
+  - id: deezer_language
+    type: string
+    name: "Deezer Language"
+    description: "Language code used by the Deezer integration, for example zh or en."
+    default_value: "zh"
+
+locales:
+  zh:
+    music_dir:
+      name: "音乐目录"
+      description: "懒猫个人目录中的音乐文件夹，Navidrome 将以只读方式扫描此目录。"
+    deezer_language:
+      name: "Deezer 语言"
+      description: "Deezer 集成使用的语言代码，例如 zh 或 en，默认为中文 zh。"
