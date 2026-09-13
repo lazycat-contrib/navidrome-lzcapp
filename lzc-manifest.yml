@@ -8,11 +8,10 @@ application:
     - /
   health_check:
     test_url: http://navidrome:4533/ping
-
 services:
   navidrome:
-    # upstream: deluan/navidrome:0.63.2
-    image: docker.1ms.run/deluan/navidrome:0.63.2
+    # upstream: deluan/navidrome:0.64.0
+    image: docker.1ms.run/deluan/navidrome:0.64.0
     user: "root"
     environment:
       - ND_PORT=4533
